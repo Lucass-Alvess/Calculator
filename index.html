@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="calculator">
+      <div class="screen">
+        <p class="screen-result"></p>
+      </div>
+      <div class="buttons">
+        <div class="">
+          <button onclick="clean()" class="color-red">C</button>
+          <button class="color-green">()</button>
+          <button class="color-green">%</button>
+          <button class="color-green">÷</button>
+        </div>
+        <div class="">
+          <button onclick="numbercalculator(7)">7</button>
+          <button onclick="numbercalculator(8)">8</button>
+          <button onclick="numbercalculator(9)">9</button>
+          <button onclick="numbercalculator()" class=" color-green">x</button>
+        </div>
+        <div class="">
+          <button onclick="numbercalculator(4)">4</button>
+          <button onclick="numbercalculator(5)">5</button>
+          <button onclick="numbercalculator(6)">6</button>
+          <button onclick="numbercalculator(7)" class="color-green">-</button>
+        </div>
+        <div class="">
+          <button onclick="numbercalculator(1)">1</button>
+          <button onclick="numbercalculator(2)">2</button>
+          <button onclick="numbercalculator(3)">3</button>
+          <button onclick="operators('+')" class="color-green">+</button>
+        </div>
+        <div class="">
+          <button>+/-</button>
+          <button onclick="numbercalculator(0)">0</button>
+          <button>.</button>
+          <button onclick="result()">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
