@@ -18,7 +18,7 @@ function numbercalculator(number) {
     screen.innerHTML = numbern1;
   } else {
     numbern2 += number;
-    screen.innerHTML = numbern2;
+    screen.innerHTML = `${numbern1} ${operato} ${numbern2}`
 
   }
 
@@ -26,13 +26,21 @@ function numbercalculator(number) {
 
 function operators(operator) {
   operato += operator
-  screen.innerHTML = operato
+  screen.innerHTML = `${numbern1} ${operato}`
 }
 
 function result() {
-  const total = +numbern1 + +numbern2;
-  screen.innerHTML = total
-  numbern1 = '';
-  numbern2 = '';
-  operato = '';
-}
+  if (operato === '+') {
+    const total = +numbern1 + +numbern2;
+    screen.innerHTML = total
+  } else if (operato === '-') {
+    const total = +numbern1 - +numbern2;
+    screen.innerHTML = total
+  } else if (operato === 'x') {
+    const total = +numbern1 * +numbern2;
+    screen.innerHTML = total
+  } else if (operato === '/') {
+    const total = +numbern1 / +numbern2;
+    screen.innerHTML = total
+  }
+} 
