@@ -1,3 +1,4 @@
+
 const screen = document.querySelector('.screen-result');
 let numbern1 = '';
 let numbern2 = '';
@@ -6,7 +7,7 @@ let operato = '';
 
 
 
-function clean() {
+function cleanAl() {
   numbern1 = '';
   numbern2 = '';
   operato = '';
@@ -26,10 +27,12 @@ function numbercalculator(number) {
 };
 
 function operators(operator) {
-  operato += operator
-  screen.innerHTML = `${numbern1} ${operato}`
-}
-
+  if (numbern1.endsWith('+') || numbern1.endsWith('-') || numbern1.endsWith('x') || numbern1.endsWith('/')) {
+    return;
+  };
+  operato = operator;
+  screen.innerHTML = `${numbern1} ${operato}`;
+};
 
 function result() {
   if (operato === '+') {
@@ -48,11 +51,7 @@ function result() {
   numbern1 = '';
   numbern2 = '';
   operato = '';
-
+  total = total.toString()
   numbern1 = total
 };
-
-function newSome() {
-
-}
 
